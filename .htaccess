@@ -1,0 +1,17 @@
+# Disable directory browsing:
+Options All -Indexes
+
+# Prevent folder listing:
+IndexIgnore *
+
+# Set rewrite engine
+RewriteEngine On
+
+# Forbidden folder
+RewriteRule ^vendor/ - [F]
+
+
+# Rewrite Rule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
