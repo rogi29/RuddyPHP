@@ -1,0 +1,28 @@
+{
+    "name":     "App1",
+
+    "host":     "localhost",
+
+    "uri":      "/RuddyPHP/App1",
+
+    "title":    "Application01",
+
+    "routes":   "diagram.json",
+
+    "description":  "A test application",
+
+    "platforms":    {
+        "devices":  "computer",
+        "os":       ["windows 8.1", "windows 8"],
+        "browsers": "!firefox"
+    },
+
+    "database": {
+        "PDO": {
+            "host": "localhost",
+            "username": "root",
+            "password": "",
+            "port": 3306
+        }
+    }
+}

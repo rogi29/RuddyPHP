@@ -1,0 +1,24 @@
+{
+    "name": "vendor/composer",
+    "description": "Description of project composer.",
+    "authors": [
+        {
+            "name": "Nick Vlug",
+            "email": "nick@ruddy.nl"
+        },
+        {
+
+        }
+    ],
+    
+    "autoload": {
+        "psr-4": {
+            "ruddy\\": "vendor/ruddy/"
+        }
+    },
+    
+    "require-dev": {
+        "symfony/http-foundation": "dev-master",
+        "phptal/phptal": "1.3.0"
+    }
+}
