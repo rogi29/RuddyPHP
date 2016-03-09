@@ -3,7 +3,7 @@
 use ruddy\Base\App\application;
 use ruddy\Base\Server as server;
 
-require_once 'autoloader.php';
+require_once realpath(__DIR__ .'/vendor/autoload.php');
 
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
