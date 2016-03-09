@@ -1,9 +1,9 @@
 {
     "name":     "App1",
 
-    "host":     "localhost",
+    "hosts":    ["localhost", "127.0.0.1"],
 
-    "uri":      "/RuddyPHP/App1",
+    "uris":     ["/RuddyPHP/App1", "/RuddyPHP"],
 
     "title":    "Application01",
 

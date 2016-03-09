@@ -7,7 +7,8 @@
             "email": "nick@ruddy.nl"
         },
         {
-
+            "name": "Gil Nimer",
+            "email": "gil@ruddy.nl"
         }
     ],
     
@@ -18,7 +19,11 @@
     },
     
     "require-dev": {
-        "symfony/http-foundation": "dev-master",
+        "symfony/http-foundation": "dev-master"
+    },
+    "require": {
+        "filp/whoops": "2.0.0",
+        "sinergi/browser-detector": "6.0.0",
         "phptal/phptal": "1.3.0"
     }
 }

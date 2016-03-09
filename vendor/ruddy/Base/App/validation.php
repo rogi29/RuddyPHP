@@ -19,7 +19,7 @@ class validation
             return false;
         }
 
-        return true;
+        return $this->isValidURI();
     }
 
     public function isValidPlatform()
@@ -91,13 +91,13 @@ class validation
                 $lastChar   = isset($GLOBALS['_PATH']['URI'][$length]) ?  $GLOBALS['_PATH']['URI'][$length] : null;
 
                 if($uris[$i] == $match && ($lastChar == '/' || $lastChar == null)) {
-                    return true;
+                    return $uris[$i];
                 }
             }
             return false;
         }
 
-        return true;
+        return $this->_data['uri'];
     }
 
     private function isValidDevice()

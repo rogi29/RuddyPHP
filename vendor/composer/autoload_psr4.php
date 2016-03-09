@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ruddy\\' => array($vendorDir . '/ruddy'),
-    'Sinergi\\' => array($vendorDir . '/Sinergi'),
+    'applications\\' => array(dirname($vendorDir) . '/applications'),
+    'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
+    'Sinergi\\BrowserDetector\\' => array($vendorDir . '/sinergi/browser-detector/src'),
 );

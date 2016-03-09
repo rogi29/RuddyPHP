@@ -6,7 +6,9 @@
  */
 
 namespace ruddy\Base\App\Routing;
+
 use ruddy\File\Parser;
+
 
 class routeCollection extends \SplObjectStorage
 {
@@ -21,7 +23,7 @@ class routeCollection extends \SplObjectStorage
     }
 
     /**
-     * Add multiple rounds from a diagram file
+     * Add multiple routes from a diagram file
      *
      * @param $filename
      */

@@ -27,6 +27,12 @@ class routing
         $this->_routes = $routes;
     }
 
+    /**
+     * Match route
+     *
+     * @param $main_uri
+     * @return bool|object
+     */
     public function matchRoute($main_uri)
     {
         $routes = $this->_routes;
@@ -110,6 +116,6 @@ class routing
 
     private function pathToArray($path)
     {
-        return explode('/', ltrim($path, '/'));
+        return explode('/', rtrim($path, '/'));
     }
 } 

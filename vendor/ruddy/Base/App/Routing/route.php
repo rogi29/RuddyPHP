@@ -71,7 +71,7 @@ class route
             throw new \Exception("Route path should be a string");
         }
 
-        $this->_path = $path;
+        $this->_path = filter_var($path, FILTER_SANITIZE_URL);
     }
 
     /**

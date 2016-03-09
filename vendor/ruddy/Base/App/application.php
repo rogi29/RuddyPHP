@@ -66,7 +66,7 @@ class application
         $this->_app         = $application;
         $this->_apps        = $this->getFolders();
         $this->_appFile     = $file;
-        $this->_directory   = $GLOBALS['_PATH']['APPS'] .DIRECTORY_SEPARATOR. $application;
+        $this->_directory   = $GLOBALS['_PATH']['CURR_APP'] = $GLOBALS['_PATH']['APPS'] .DIRECTORY_SEPARATOR. $application;
     }
 
     /**
@@ -100,7 +100,7 @@ class application
         }
 
         //Check if URL is valid
-        if(!$check->isValidURL()) {
+        if(!$uri = $check->isValidURL()) {
             echo 'Invalid URL!';
             return;
         }
@@ -127,7 +127,7 @@ class application
 
         //Routing, get route
         $routing = new routing\routing($routes);
-        $route = $routing->matchRoute($data['uri']);
+        $route = $routing->matchRoute($uri);
         if(!($route instanceof routing\route)) {
             throw new \Exception('404, page does not exists!');
         }
@@ -179,8 +179,13 @@ class application
         // Build Params
         $params = count($route->getParams()) > 0 ? $route->getParams() : array();
 
+        //Set new instance
+        $controller = new $nameSpace();
+
+        $controller->title($this->_title);
+
         // Execute function
-        return call_user_func_array(array($nameSpace, $function), $params);
+        return call_user_func_array(array($controller, $function), $params);
     }
 
     /**
